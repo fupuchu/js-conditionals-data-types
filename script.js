@@ -4,16 +4,18 @@
 // be 1. If the user gives the numbers 3 and 2, the result should still
 // be 1.
 //
-// Hint: To get the user input and store it in a variable, we can do 
+// Hint: To get the user input and store it in a variable, we can do
 // `var someVar = prompt("Give me a high five");`. Consider asking for 1
 // number at a time first.
 // ====================================================================
 // Write your solution below.
 // ====================================================================
 
+var userNumOne = parseInt(prompt("Provide the first number", "0"));
+var userNumTwo = parseInt(prompt("Provide the second number", "0"));
 
-
-
+var result = userNumOne - userNumTwo;
+console.log(result);
 
 
 
@@ -38,9 +40,21 @@
 // ====================================================================
 
 
+var ordinalNum = parseInt(prompt("Provide a number", "0"));
+var NumSplit = ordinalNum.split("");
+var NumSlice = NumSplit.slice(-1)[0];
+//split into Array
+//get last index of array and compare it
 
-
-
+if(NumSlice == 1){
+  console.log(ordinalNum + "st");
+}else if (NumSlice == 2) {
+  console.log(ordinalNum + "nd");
+}else if (NumSlice == 3) {
+  console.log(ordinalNum + "rd");
+}else {
+  console.log(ordinalNum + "th");
+}
 
 
 
@@ -61,9 +75,10 @@
 // Write your solution below.
 // =======================================================================
 
-
-
-
+//need to specify range for math random
+//math.floor to round up numbers?
+var randomnumber = Math.floor(Math.random() * (10 - 1) + 1);
+console.log(randomnumber);
 
 
 
@@ -88,6 +103,15 @@
 // =====================================================================
 // Write your solution below.
 // =====================================================================
+
+
+var foo = Math.random();
+
+//answer below still figuring out
+//Math.random().toString(36).substring(7);
+
+
+
 
 
 
@@ -138,10 +162,10 @@ var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
 
 // ========================== Exercise 6 ==============================
 // Examine the phonebook below.
-// 
+//
 // 1. Prompt the user for a name, and show
-// (in any way, e.g. console.log) the phone number corresponding to 
-// the given name. 
+// (in any way, e.g. console.log) the phone number corresponding to
+// the given name.
 //
 // 2. Prompt the user for a name and a number. Update the number
 // corresponding to the name if the name exists in the phonebook.
@@ -154,7 +178,7 @@ var testArray = [1, 2, 4, 8, 16, 32, 64, 128];
 //
 // Bonus: Prompt the user for a number. If the number exists in the
 // phonebook, show the name corresponding to it.
-// Hint: The phonebook is a JS Object. Search Google / MDN for 
+// Hint: The phonebook is a JS Object. Search Google / MDN for
 // 'Javascript Object methods' to see if there might be something useful.
 // ====================================================================
 // Write your solution below.
@@ -195,7 +219,7 @@ var Phonebook = {
 // =====================================================================
 // A common class of bugs that programmers face occurs when they change
 // an object that they didn't mean to.
-// 
+//
 // Examine the array below.
 // Prompt the user for 2 integers. Swap the elements in the 2 positions
 // of the array corresponding to the user input, and display the result.
